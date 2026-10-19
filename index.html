@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f0fa" />
+  <meta name="description" content="장미원교회 담임목사부부 부임 30주년 및 임직·취임·추대·은퇴 감사예배 모바일 초대장" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="장미원교회 감사예배 초대장" />
+  <meta property="og:description" content="2026년 10월 25일(주일) 오후 3시 · 장미원교회 본당" />
+  <title>장미원교회 | 감사예배 초대장</title>
+  <style>
+    :root { color-scheme: light; --plum: #753582; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 280px; background: #f7f0fa; color: #392440; font-family: system-ui, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; }
+    main { width: min(100%, 540px); margin: 0 auto; background: #fff; box-shadow: 0 6px 35px rgb(71 28 85 / 12%); }
+    .page { margin: 0; background: #fff; line-height: 0; }
+    .page img { display: block; width: 100%; height: auto; }
+    .page + .page { border-top: 6px solid #f7f0fa; }
+    .scroll-hint { position: fixed; bottom: max(20px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); z-index: 5; border: 1px solid rgb(117 53 130 / 16%); background: rgb(255 255 255 / 91%); color: var(--plum); border-radius: 999px; padding: 9px 15px; font-size: 12px; font-weight: 700; box-shadow: 0 3px 16px rgb(0 0 0 / 10%); pointer-events: none; transition: opacity .3s ease; white-space: nowrap; }
+    .scroll-hint.hide { opacity: 0; }
+    footer { width: min(100%, 540px); margin: auto; text-align: center; padding: 25px 16px 35px; font-size: 12px; color: #84698b; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .scroll-hint { transition: none; } }
+  </style>
+</head>
+<body>
+  <main aria-label="장미원교회 감사예배 모바일 초대장">
+    <section class="page" aria-label="1페이지: 감사예배 안내"><img src="assets/invite-1.webp" width="682" height="512" alt="장미원교회 담임목사부부 부임 30주년 및 임직, 취임, 추대, 은퇴 감사예배. 2026년 10월 25일 주일 오후 3시, 장미원교회 본당." fetchpriority="high" /></section>
+    <section class="page" aria-label="2페이지: 초대의 글"><img src="assets/invite-2.webp" width="682" height="512" alt="장미원교회 담임목사 박래석 목사의 초대의 글." loading="lazy" /></section>
+    <section class="page" aria-label="3페이지: 임직 및 예배 일정"><img src="assets/invite-3.webp" width="682" height="512" alt="감사예배 임직자와 예배 일정 안내." loading="lazy" /></section>
+    <section class="page" aria-label="4페이지: 오시는 길"><img src="assets/invite-4.webp" width="682" height="512" alt="장미원교회 오시는 길과 교통편 안내. 인천광역시 남동구 만수4동 402-5호." loading="lazy" /></section>
+  </main>
+  <div class="scroll-hint" id="scrollHint" aria-hidden="true">아래로 내려 초대장 보기 ↓</div>
+  <footer>장미원교회 · 감사예배에 초대합니다</footer>
+  <script>
+    const hint = document.getElementById('scrollHint');
+    function updateHint() { hint.classList.toggle('hide', window.scrollY > 70); }
+    window.addEventListener('scroll', updateHint, { passive: true });
+    updateHint();
+  </script>
+</body>
+</html>
